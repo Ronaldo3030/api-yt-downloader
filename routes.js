@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { Router } = require('express');
-const donwloadController = require('./controllers/donwloadController');
+const DonwloadController = require('./controllers/DonwloadController');
 
 const router = Router();
 
@@ -12,6 +12,6 @@ router.get('/ping', (req,res) => {
   return res.status(200).json({ pong: "Pong" });
 });
 
-router.get('/download/:cod/:format', donwloadController.downloadVideo);
+router.get('/download/:cod/:format', DonwloadController.downloadVideo);
 
 module.exports = router;
